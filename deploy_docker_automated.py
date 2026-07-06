@@ -1,7 +1,7 @@
 import subprocess
 import os
 import sys
-from diagnostics import run_diagnostics
+from localDiagnostics import run_diagnostics
 
 def run_az_command(command_list):
     """Utility function to safely execute an Azure CLI command array"""
