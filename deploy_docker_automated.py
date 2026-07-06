@@ -1,6 +1,7 @@
 import subprocess
 import os
 import sys
+from diagnostics import run_diagnostics
 
 def run_az_command(command_list):
     """Utility function to safely execute an Azure CLI command array"""
@@ -16,6 +17,18 @@ def run_az_command(command_list):
         sys.exit(1)
 
 def main():
+
+    # Doing Local Diagnostics before deploying VM
+    print("=== 1. Running Local Diagnostics ===")
+    run_diagnostics()
+
+    deploy = input("\nDeploy to Azure? (y/n): ").strip().lower()
+
+    if deploy != "y":
+        print("Deployment cancelled. Local diagnostics report generated.")
+        return
+
+
     print("=== Azure SRE DOcker Compose Automated Deployment Pipeline using Python ===")
 
     # 1. Capture user inputs
