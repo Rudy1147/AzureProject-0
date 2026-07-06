@@ -4,33 +4,33 @@
     ====================================================
 
     Generated:
-    2026-07-06 10:25:08.153461
+    2026-07-06 10:30:50.534919
 
     ----------------------------------------------------
     CPU (Before Workload)
     ----------------------------------------------------
-    top - 10:25:07 up  7:54,  1 user,  load average: 0.25, 0.09, 0.07
-Tasks:  55 total,   2 running,  51 sleeping,   0 stopped,   2 zombie
-%Cpu(s):  5.3 us,  3.3 sy,  0.0 ni, 89.0 id,  0.0 wa,  0.0 hi,  2.4 si,  0.0 st 
-MiB Mem :   7752.7 total,   5788.4 free,   1679.6 used,    466.2 buff/cache     
-MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   6073.0 avail Mem 
+    top - 10:30:50 up  8:00,  1 user,  load average: 0.64, 0.24, 0.13
+Tasks:  49 total,   1 running,  48 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6.7 us,  2.9 sy,  0.0 ni, 87.6 id,  0.0 wa,  0.0 hi,  2.9 si,  0.0 st 
+MiB Mem :   7752.7 total,   4890.8 free,   2609.2 used,    434.8 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   5143.5 avail Mem 
 
 
     ----------------------------------------------------
     CPU (After Workload)
     ----------------------------------------------------
-    top - 10:25:08 up  7:54,  1 user,  load average: 0.25, 0.09, 0.07
-Tasks:  54 total,   4 running,  49 sleeping,   0 stopped,   1 zombie
-%Cpu(s):  9.0 us, 11.4 sy,  0.0 ni, 78.1 id,  0.0 wa,  0.0 hi,  1.5 si,  0.0 st 
-MiB Mem :   7752.7 total,   5708.7 free,   1745.2 used,    480.4 buff/cache     
-MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   6007.5 avail Mem 
+    top - 10:30:50 up  8:00,  1 user,  load average: 0.64, 0.24, 0.13
+Tasks:  49 total,   1 running,  48 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 11.9 us,  1.9 sy,  0.0 ni, 83.8 id,  0.0 wa,  0.0 hi,  2.4 si,  0.0 st 
+MiB Mem :   7752.7 total,   4820.7 free,   2678.9 used,    435.2 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   5073.8 avail Mem 
 
 
     ----------------------------------------------------
     Memory (Before)
     ----------------------------------------------------
                    total        used        free      shared  buff/cache   available
-Mem:           7.6Gi       1.6Gi       5.7Gi       3.5Mi       466Mi       5.9Gi
+Mem:           7.6Gi       2.6Gi       4.7Gi       3.5Mi       435Mi       5.0Gi
 Swap:          2.0Gi          0B       2.0Gi
 
 
@@ -38,7 +38,7 @@ Swap:          2.0Gi          0B       2.0Gi
     Memory (After)
     ----------------------------------------------------
                    total        used        free      shared  buff/cache   available
-Mem:           7.6Gi       1.7Gi       5.6Gi       3.5Mi       480Mi       5.8Gi
+Mem:           7.6Gi       2.6Gi       4.7Gi       3.5Mi       435Mi       4.9Gi
 Swap:          2.0Gi          0B       2.0Gi
 
 
@@ -48,17 +48,17 @@ Swap:          2.0Gi          0B       2.0Gi
     Filesystem      Size  Used Avail Use% Mounted on
 none            3.8G     0  3.8G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
 none            3.8G  4.0K  3.8G   1% /mnt/wsl
-drivers         927G  694G  233G  75% /usr/lib/wsl/drivers
+drivers         927G  696G  232G  76% /usr/lib/wsl/drivers
 /dev/sdd       1007G  4.2G  952G   1% /
 none            3.8G   48K  3.8G   1% /mnt/wslg
 none            3.8G     0  3.8G   0% /usr/lib/wsl/lib
 rootfs          3.8G  2.8M  3.8G   1% /init
-none            3.8G  548K  3.8G   1% /run
+none            3.8G  552K  3.8G   1% /run
 none            3.8G     0  3.8G   0% /run/lock
 none            3.8G     0  3.8G   0% /run/shm
 none            3.8G   80K  3.8G   1% /mnt/wslg/versions.txt
 none            3.8G   80K  3.8G   1% /mnt/wslg/doc
-C:\             927G  694G  233G  75% /mnt/c
+C:\             927G  696G  232G  76% /mnt/c
 tmpfs           776M   20K  776M   1% /run/user/1000
 
 
@@ -72,8 +72,9 @@ udp   UNCONN 0      0      10.255.255.254:53         0.0.0.0:*
 udp   UNCONN 0      0           127.0.0.1:323        0.0.0.0:*          
 udp   UNCONN 0      0               [::1]:323           [::]:*          
 tcp   LISTEN 0      4096       127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      511         127.0.0.1:45111      0.0.0.0:*          
 tcp   LISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*          
-tcp   LISTEN 0      511         127.0.0.1:40147      0.0.0.0:*          
+tcp   LISTEN 0      511         127.0.0.1:60561      0.0.0.0:*          
 tcp   LISTEN 0      1000   10.255.255.254:53         0.0.0.0:*          
 
 
