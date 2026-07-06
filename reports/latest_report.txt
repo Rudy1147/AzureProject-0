@@ -1,0 +1,99 @@
+
+    ====================================================
+            LOCAL SYSTEM DIAGNOSTIC REPORT
+    ====================================================
+
+    Generated:
+    2026-07-06 09:52:49.887847
+
+    ----------------------------------------------------
+    CPU (Before Workload)
+    ----------------------------------------------------
+    top - 09:52:49 up  7:22,  1 user,  load average: 0.18, 0.16, 0.11
+Tasks:  52 total,   1 running,  51 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.0 us,  2.0 sy,  0.0 ni, 96.1 id,  0.0 wa,  0.0 hi,  1.0 si,  0.0 st 
+MiB Mem :   7752.7 total,   4589.0 free,   3031.7 used,    313.3 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   4721.0 avail Mem 
+
+
+    ----------------------------------------------------
+    CPU (After Workload)
+    ----------------------------------------------------
+    top - 09:52:49 up  7:22,  1 user,  load average: 0.18, 0.16, 0.11
+Tasks:  52 total,   1 running,  51 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.5 sy,  0.0 ni, 96.6 id,  0.0 wa,  0.0 hi,  2.4 si,  0.0 st 
+MiB Mem :   7752.7 total,   4586.6 free,   3033.8 used,    313.6 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   4718.9 avail Mem 
+
+
+    ----------------------------------------------------
+    Memory (Before)
+    ----------------------------------------------------
+                   total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       3.0Gi       4.5Gi       3.5Mi       313Mi       4.6Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+
+    ----------------------------------------------------
+    Memory (After)
+    ----------------------------------------------------
+                   total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       3.0Gi       4.5Gi       3.5Mi       313Mi       4.6Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+
+    ----------------------------------------------------
+    Disk
+    ----------------------------------------------------
+    Filesystem      Size  Used Avail Use% Mounted on
+none            3.8G     0  3.8G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.8G  4.0K  3.8G   1% /mnt/wsl
+drivers         927G  698G  229G  76% /usr/lib/wsl/drivers
+/dev/sdd       1007G  4.2G  952G   1% /
+none            3.8G   44K  3.8G   1% /mnt/wslg
+none            3.8G     0  3.8G   0% /usr/lib/wsl/lib
+rootfs          3.8G  2.8M  3.8G   1% /init
+none            3.8G  548K  3.8G   1% /run
+none            3.8G     0  3.8G   0% /run/lock
+none            3.8G     0  3.8G   0% /run/shm
+none            3.8G   80K  3.8G   1% /mnt/wslg/versions.txt
+none            3.8G   80K  3.8G   1% /mnt/wslg/doc
+C:\             927G  698G  229G  76% /mnt/c
+tmpfs           776M   20K  776M   1% /run/user/1000
+
+
+    ----------------------------------------------------
+    Network Connections
+    ----------------------------------------------------
+    Netid State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0          127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0       127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0      10.255.255.254:53         0.0.0.0:*          
+udp   UNCONN 0      0           127.0.0.1:323        0.0.0.0:*          
+udp   UNCONN 0      0               [::1]:323           [::]:*          
+tcp   LISTEN 0      511         127.0.0.1:58107      0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      1000   10.255.255.254:53         0.0.0.0:*          
+tcp   LISTEN 0      511         127.0.0.1:40197      0.0.0.0:*          
+
+
+    ----------------------------------------------------
+    FastAPI Workload
+    ----------------------------------------------------
+    Requests Sent : 50
+
+    Successful   : 0
+
+    Failed        : 50
+
+    Average Latency : 0.0000 seconds
+
+
+    SUMMARY
+    ----------------------------------------------------
+
+    Diagnostics completed successfully.
+
+    Review the statistics above before deploying to Azure.
+    
