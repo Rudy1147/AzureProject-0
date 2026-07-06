@@ -31,12 +31,7 @@ def get_disk():
 
 
 def get_cpu():
-    return run_command([
-        "ps",
-        "-eo",
-        "pid,comm,%cpu",
-        "--sort=-%cpu"
-    ])
+    return run_command(["top", "-b", "-n", "1"])
 
 
 def get_network():
@@ -99,10 +94,7 @@ def generate_report(before, after, workload):
 
     os.makedirs(REPORT_DIR, exist_ok=True)
 
-    filename = os.path.join(
-        REPORT_DIR,
-        f"diagnostic_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-    )
+    filename = os.path.join(REPORT_DIR, "latest_report.txt")
 
     successful, failed, avg_latency = workload
 

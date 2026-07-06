@@ -1,6 +1,8 @@
 import time
 import logging
+import os
 from typing import List
+from fastapi.responses import PlainTextResponse, HTMLResponse
 from fastapi import FastAPI, Request, HTTPException, status, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
@@ -80,3 +82,17 @@ async def create_system_log(payload: LogPayload, user: dict = Depends(verify_sre
 @app.get("/logs", status_code=200)
 async def read_system_logs():
     return log_dao.get_all_logs()
+    
+@app.get("/localReport", response_class=HTMLResponse, status_code=200)
+async def get_page():
+    # Path to the text file
+    file_path = "reports/latest_report.txt"
+    
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+    else:
+        content = "File not found."
+
+    # Return as plain text or pre-formatted HTML
+    return HTMLResponse(content=f"<pre>{content}</pre>")
