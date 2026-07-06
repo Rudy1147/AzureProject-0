@@ -1,3 +1,2 @@
 .venv/
 reports/*
-!reports/latest_report.txt

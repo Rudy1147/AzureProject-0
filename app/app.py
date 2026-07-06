@@ -2,6 +2,7 @@ import time
 import logging
 import os
 from typing import List
+from localDiagnostics import run_diagnostics
 from fastapi.responses import PlainTextResponse, HTMLResponse
 from fastapi import FastAPI, Request, HTTPException, status, Depends
 from fastapi.middleware.cors import CORSMiddleware
@@ -83,7 +84,9 @@ async def create_system_log(payload: LogPayload, user: dict = Depends(verify_sre
 async def read_system_logs():
     return log_dao.get_all_logs()
     
-@app.get("/localReport", response_class=HTMLResponse, status_code=200)
+
+# This serves to get the latest report generated from the local folder    
+"""@app.get("/localReport", response_class=HTMLResponse, status_code=200)
 async def get_page():
     # Path to the text file
     file_path = "reports/latest_report.txt"
@@ -96,3 +99,11 @@ async def get_page():
 
     # Return as plain text or pre-formatted HTML
     return HTMLResponse(content=f"<pre>{content}</pre>")
+"""
+
+@app.get("/localReport", response_class=HTMLResponse)
+async def local_report():
+
+    report = run_diagnostics()
+
+    return HTMLResponse(f"<pre>{report}</pre>")
