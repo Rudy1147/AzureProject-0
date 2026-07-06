@@ -2,7 +2,6 @@ import time
 import logging
 import os
 from typing import List
-from localDiagnostics import run_diagnostics
 from fastapi.responses import PlainTextResponse, HTMLResponse
 from fastapi import FastAPI, Request, HTTPException, status, Depends
 from fastapi.middleware.cors import CORSMiddleware
