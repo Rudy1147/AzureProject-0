@@ -86,7 +86,7 @@ async def read_system_logs():
     
 
 # This serves to get the latest report generated from the local folder    
-"""@app.get("/localReport", response_class=HTMLResponse, status_code=200)
+@app.get("/localReport", response_class=HTMLResponse, status_code=200)
 async def get_page():
     # Path to the text file
     file_path = "reports/latest_report.txt"
@@ -99,11 +99,3 @@ async def get_page():
 
     # Return as plain text or pre-formatted HTML
     return HTMLResponse(content=f"<pre>{content}</pre>")
-"""
-
-@app.get("/localReport", response_class=HTMLResponse)
-async def local_report():
-
-    report = run_diagnostics()
-
-    return HTMLResponse(f"<pre>{report}</pre>")
